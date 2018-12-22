@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="285.0" prefWidth="409.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="canonical_tools.FXMLDocumentController">
+  <children>
+    <Pane layoutX="-5.0" layoutY="0.0" opacity="1.0" prefHeight="285.0" prefWidth="410.0">
+      <children>
+        <Button fx:id="fileChooserButton" layoutX="214.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleFileChooserButtonAction" text="Choose Input File">
+          <font>
+            <Font name="Andalus" size="16.0" fx:id="x1" />
+          </font>
+        </Button>
+        <Label layoutX="19.0" layoutY="6.0" prefWidth="228.0" text="Canonical Tools" underline="true">
+          <font>
+            <Font name="Andalus" size="24.0" />
+          </font>
+        </Label>
+        <ComboBox fx:id="toolChooser1" editable="false" layoutX="15.0" layoutY="125.0" prefHeight="31.421875" prefWidth="189.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value=" " />
+              <String fx:value="Retrograde" />
+              <String fx:value="Inversion" />
+              <String fx:value="Fulcrum Inversion" />
+              <String fx:value="Rhythm Preserving Retrograde" />
+              <String fx:value="Transpose" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <CheckBox fx:id="midiOut" layoutX="109.0" layoutY="246.0" mnemonicParsing="false" text="Midi Out">
+          <font>
+            <Font name="Andalus" size="12.0" fx:id="x2" />
+          </font>
+        </CheckBox>
+        <CheckBox fx:id="queueMode" font="$x2" layoutX="14.0" layoutY="246.0" mnemonicParsing="false" text="Queue Mode" />
+        <Label font="$x1" layoutX="214.0" layoutY="128.0" prefWidth="101.0" text="1st Transform" />
+        <ComboBox fx:id="toolChooser2" editable="false" layoutX="14.0" layoutY="160.0" prefHeight="31.421875" prefWidth="189.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="" />
+              <String fx:value="Retrograde" />
+              <String fx:value="Inversion" />
+              <String fx:value="Fulcrum Inversion" />
+              <String fx:value="Rhythm Preserving Retrograde" />
+              <String fx:value="Transpose" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Label font="$x1" layoutX="214.0" layoutY="164.0" prefWidth="101.0" text="2nd Transform" />
+        <ComboBox fx:id="toolChooser3" editable="false" layoutX="14.0" layoutY="194.0" prefHeight="31.421875" prefWidth="189.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="" />
+              <String fx:value="Retrograde" />
+              <String fx:value="Inversion" />
+              <String fx:value="Fulcrum Inversion" />
+              <String fx:value="Rhythm Preserving Retrograde" />
+              <String fx:value="Transpose" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Label font="$x1" layoutX="214.0" layoutY="201.0" prefWidth="101.0" text="3rd Transform" />
+        <Button fx:id="runButton" font="$x1" layoutX="265.0" layoutY="239.0" mnemonicParsing="false" onAction="#handleRunButton" text="RUN" />
+        <TextField fx:id="enterString" blendMode="DARKEN" editable="true" layoutX="17.0" layoutY="79.0" opacity="1.0" prefWidth="373.0" />
+        <Label font="$x1" layoutX="19.0" layoutY="55.0" prefWidth="170.0" text="Or enter a JFugue String:" />
+        <TextField fx:id="fulcrumField" layoutX="369.0" layoutY="128.0" prefWidth="34.999977929684974" text="60" />
+        <TextField fx:id="transposeField" layoutX="373.0" layoutY="153.0" prefWidth="35.0" text="0" />
+        <Label font="$x2" layoutX="322.0" layoutY="130.0" prefWidth="55.0" text="Fulcrum" />
+        <Label font="$x2" layoutX="322.0" layoutY="155.0" prefWidth="55.000099999997474" text="Transpose" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>
